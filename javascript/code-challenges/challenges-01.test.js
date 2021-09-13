@@ -103,14 +103,14 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  callback = [];
+  let newArray = [];
   for(let i = 0; i < times; i++){
-    addValues(arr, num);
+    callback(arr, num);
   }
   arr.forEach(value => {
-    callback.push(value);
+    newArray.push(value);
   });
-  return callback;
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
